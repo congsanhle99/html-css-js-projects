@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top left, #36d1dc, #5b86e5);
+  color: var(--white-color);
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--black-color);
+  text-shadow: 1px 1px 2px #bbb;
+  letter-spacing: 2px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--white-color);
+  width: 100%;
+  padding: 8px 0;
+  color: var(--white-color);
+  font-size: 16px;
+}
+
+/* anima */
+.form-control label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: -1;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #5b86e5;
+  transform: translateY(-24px);
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  border-bottom-color: #5b86e5;
+}
+
+/*  */
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  border: 1px solid #5b86e5;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #bbb;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.text {
+  margin-top: 24px;
+}

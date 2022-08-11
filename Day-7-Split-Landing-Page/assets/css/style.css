@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --hover-width: 75%;
+  --other-width: 25%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  position: relative;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: linear-gradient(to left, #36d1dc, #5b86e5);
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.split.right {
+  right: 0;
+  background: linear-gradient(to left, #ba5370, #f4e2d8);
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.split.left,
+.split.left::before,
+.split.right,
+.split.right::before {
+  transition: all 1s;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #000;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px #ccc;
+  transition: all 0.3s;
+}
+
+.left .btn:hover {
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+.right .btn:hover {
+  background: linear-gradient(to right, #ba5370, #f4e2d8);
+}
+
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+    top: 30%;
+  }
+}
