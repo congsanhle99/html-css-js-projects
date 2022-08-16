@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top left, #ddd6f3, #faaca8);
+}
+
+button {
+  background-color: #faaca8;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding: 16px 32px;
+  overflow: hidden;
+  margin: 10px 0;
+  position: relative;
+}
+
+button .circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ddd6f3;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
