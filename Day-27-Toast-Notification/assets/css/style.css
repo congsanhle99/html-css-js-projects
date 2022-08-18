@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to top left, #ddd6f3, #faaca8);
+}
+
+.btn {
+  background-color: #ddd6f3;
+  color: #000;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+#toasts {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.toast {
+  background-color: #faaca8;
+  color: #000;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 4px;
+}
+
+.toast.info {
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.toast.success {
+  color: green;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.toast.error {
+  color: red;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
